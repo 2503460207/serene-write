@@ -1,0 +1,589 @@
+/* 全局重置 & 基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft Yahei", "PingFang SC", sans-serif;
+}
+
+/* 主题色定义：暖黄（#F9E79F）、嫩绿（#82E0AA）、深绿（#28B463）、浅黄（#FEF9E7） */
+:root {
+    --warm-yellow: #F9E79F;
+    --warm-yellow-deep: #F1C40F;
+    --light-green: #82E0AA;
+    --dark-green: #28B463;
+    --light-yellow-bg: #FEF9E7;
+    --text-color: #34495E;
+}
+
+body {
+    background-color: var(--light-yellow-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%2382E0AA' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* 猫咪图标装饰样式 */
+.cat-icon {
+    color: var(--warm-yellow-deep);
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+/* 页头样式 - 暖黄+嫩绿主题 */
+.site-header {
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(129, 224, 170, 0.2);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border-bottom: 3px solid var(--light-green);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.site-title {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.site-title i {
+    color: var(--warm-yellow-deep);
+}
+
+.site-description {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.main-nav .nav-list {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    color: var(--text-color);
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--dark-green);
+    border-bottom-color: var(--light-green);
+}
+
+/* 主体内容容器 */
+.site-main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+}
+
+/* 侧边栏样式 - 暖黄背景+嫩绿边框 */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sidebar-section {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(129, 224, 170, 0.1);
+    border-left: 4px solid var(--light-green);
+}
+
+.section-title {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--warm-yellow);
+}
+
+.author-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 0.8rem;
+    border: 3px solid var(--light-green);
+}
+
+.author-name {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--dark-green);
+}
+
+.author-desc {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.tag {
+    background: rgba(130, 224, 170, 0.1);
+    color: var(--dark-green);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    border: 1px solid var(--light-green);
+}
+
+.recommend-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.recommend-link {
+    color: var(--text-color);
+    transition: color 0.3s;
+    font-size: 0.95rem;
+}
+
+.recommend-link:hover {
+    color: var(--dark-green);
+    text-decoration: underline;
+}
+
+/* 内容区通用样式 */
+.content-area {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+/* 练习任务区域样式 - 暖黄背景+嫩绿装饰 */
+.task-section {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(129, 224, 170, 0.1);
+    border-top: 4px solid var(--light-green);
+    position: relative;
+    overflow: hidden;
+}
+
+/* 任务区域角落猫咪装饰 */
+.task-section::after {
+    content: "🐱";
+    font-size: 2rem;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    opacity: 0.1;
+    transform: rotate(15deg);
+}
+
+.task-list {
+    list-style: disc;
+    padding-left: 1.5rem;
+    color: var(--text-color);
+}
+
+.task-list li {
+    margin: 0.8rem 0;
+    padding: 0.3rem 0;
+    border-bottom: 1px dashed var(--warm-yellow);
+}
+
+/* 许愿树区域样式 - 核心修改：暖黄+嫩绿主题 + 猫咪装饰 */
+.wish-tree-section {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(129, 224, 170, 0.1);
+    border-top: 4px solid var(--light-green);
+    position: relative;
+    overflow: hidden;
+}
+
+/* 许愿树输入框猫咪装饰 */
+.cat-decoration {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+/* 许愿树角落猫咪装饰 */
+.cat-corner-decoration {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 80px;
+    height: 80px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23F9E79F'%3E%3Cpath d='M12 2c2.76 0 5 2.24 5 5v1h-3v-1c0-1.65-1.35-3-3-3s-3 1.35-3 3v1h-3v-1c0-2.76 2.24-5 5-5zm-2 18c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-1.05c1.69-.31 3-1.69 3-3.45 0-1.41-.91-2.63-2.17-3.16l-.83-.27-.83.27C8.91 13.87 8 15.09 8 16.5c0 1.76 1.31 3.14 3 3.45V20zm8-11c0-2.76-2.24-5-5-5s-5 2.24-5 5c0 2.76 2.24 5 5 5s5-2.24 5-5zm-8-3c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    transform: rotate(30deg);
+}
+
+.wish-input {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#wish {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--light-green);
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: var(--light-yellow-bg);
+    transition: border 0.3s;
+}
+
+#wish:focus {
+    outline: none;
+    border-color: var(--warm-yellow-deep);
+    box-shadow: 0 0 5px rgba(241, 196, 15, 0.2);
+}
+
+#addBtn {
+    padding: 0.8rem 1.5rem;
+    background: var(--dark-green);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#addBtn::before {
+    content: "🍃";
+}
+
+#addBtn:hover {
+    background: #219653;
+}
+
+/* 清空按钮样式 - 暖黄主题 */
+#clearBtn.secondary {
+    padding: 0.8rem 1.5rem;
+    background: var(--warm-yellow);
+    color: var(--text-color);
+    border: 1px solid var(--warm-yellow-deep);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#clearBtn.secondary::before {
+    content: "🧹";
+}
+
+#clearBtn.secondary:hover {
+    background: var(--warm-yellow-deep);
+    color: white;
+}
+
+.wish-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.wish-list li {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--warm-yellow);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(249, 231, 159, 0.1);
+    margin: 0.5rem 0;
+    border-radius: 4px;
+}
+
+.wish-list li::before {
+    content: "🍃";
+}
+
+/* 最新文章样式 - 嫩绿装饰 */
+.latest-posts {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(129, 224, 170, 0.1);
+    border-top: 4px solid var(--light-green);
+}
+
+.section-heading {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--warm-yellow);
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.post-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(129, 224, 170, 0.1);
+    transition: transform 0.3s;
+    border: 1px solid var(--warm-yellow);
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(129, 224, 170, 0.2);
+}
+
+.post-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--light-green);
+}
+
+.post-content {
+    padding: 1.5rem;
+}
+
+.post-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.post-title a {
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+.post-title a:hover {
+    color: var(--dark-green);
+}
+
+.post-excerpt {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.post-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: #999;
+}
+
+.post-meta i {
+    margin-right: 0.3rem;
+    color: var(--dark-green);
+}
+
+/* 分类导航样式 - 暖黄+嫩绿主题 */
+.categories {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(129, 224, 170, 0.1);
+    border-top: 4px solid var(--light-green);
+}
+
+.categories-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1.5rem;
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    border-radius: 8px;
+    background: var(--light-yellow-bg);
+    transition: all 0.3s;
+    text-align: center;
+    border: 1px solid var(--warm-yellow);
+}
+
+.category-item:hover {
+    background: var(--light-green);
+    color: white;
+    transform: scale(1.05);
+}
+
+.category-item i {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+    color: var(--warm-yellow-deep);
+}
+
+.category-item:hover i {
+    color: white;
+}
+
+.category-name {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.category-count {
+    font-size: 0.85rem;
+    color: #999;
+}
+
+.category-item:hover .category-count {
+    color: white;
+}
+
+/* 页脚样式 - 深绿+暖黄主题 */
+.site-footer {
+    background-color: var(--dark-green);
+    color: #fff;
+    padding: 3rem 0 1.5rem;
+    margin-top: 3rem;
+    border-top: 5px solid var(--warm-yellow-deep);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--warm-yellow);
+}
+
+.footer-about p {
+    color: #ddd;
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.footer-link-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.footer-link-list a {
+    color: #ddd;
+    transition: color 0.3s;
+    font-size: 0.95rem;
+}
+
+.footer-link-list a:hover {
+    color: var(--warm-yellow);
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    font-size: 0.95rem;
+}
+
+.contact-list i {
+    margin-right: 0.5rem;
+    color: var(--warm-yellow);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #999;
+    font-size: 0.9rem;
+}
+
+/* 响应式适配 */
+@media (max-width: 768px) {
+    .site-main {
+        grid-template-columns: 1fr;
+    }
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+    .categories-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .wish-input {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .cat-decoration {
+        display: none;
+    }
+    #addBtn, #clearBtn {
+        width: 100%;
+        justify-content: center;
+    }
+    .categories-container {
+        grid-template-columns: 1fr;
+    }
+    .task-section::after {
+        font-size: 1.5rem;
+    }
+}
