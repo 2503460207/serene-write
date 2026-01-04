@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>罗小黑战记 - 个人博客</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 页头区域 -->
+    <header class="site-header">
+        <div class="header-container">
+            <h1 class="site-title">
+                <i class="fas fa-paw"></i> 罗小黑战记博客
+            </h1>
+            <p class="site-description">记录关于小黑、无限和妖灵世界的一切</p>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link">首页</a></li>
+                    <li><a href="#characters" class="nav-link">角色解析</a></li>
+                    <li><a href="#plot" class="nav-link">剧情探讨</a></li>
+                    <li><a href="#art" class="nav-link">美术设计</a></li>
+                    <li><a href="#about" class="nav-link">关于博主</a></li>
+                    <li><a href="#wish-tree" class="nav-link">许愿树</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 主体内容区域 -->
+    <main class="site-main">
+        <!-- 侧边栏 -->
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h3 class="section-title">博主简介</h3>
+                <div class="author-card">
+                    <img src="https://file.moyubuluo.com/d/file/2025-07-23/d13c6b890adf335ee58fd045a1ca62de.jpg" alt="罗小黑头像" class="author-avatar" loading="lazy">
+                    <p class="author-name">小黑的守护者</p>
+                    <p class="author-desc">罗小黑战记忠实粉丝，喜欢分析动画细节和世界观</p>
+                </div>
+            </div>
+            <div class="sidebar-section">
+                <h3 class="section-title">热门标签</h3>
+                <div class="tags-container">
+                    <span class="tag">罗小黑</span>
+                    <span class="tag">无限</span>
+                    <span class="tag">妖灵会馆</span>
+                    <span class="tag">国漫崛起</span>
+                    <span class="tag">治愈系</span>
+                    <span class="tag">世界观</span>
+                    <span class="tag">角色设定</span>
+                </div>
+            </div>
+            <div class="sidebar-section">
+                <h3 class="section-title">推荐文章</h3>
+                <ul class="recommend-list">
+                    <li><a href="#" class="recommend-link">《罗小黑战记》世界观深度解析</a></li>
+                    <li><a href="#" class="recommend-link">无限老师的实力到底有多强？</a></li>
+                    <li><a href="#" class="recommend-link">妖灵种类大全及能力介绍</a></li>
+                    <li><a href="#" class="recommend-link">电影版与TV版的剧情关联</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- 主要内容区 -->
+        <div class="content-area">
+            <!-- 练习1：修改标题为故事分析 + 新增猫咪装饰 -->
+            <section class="task-section task-section-1">
+                <h1>
+                    <i class="fas fa-cat cat-icon"></i> 故事分析
+                </h1>
+                <p class="subtitle">这 3 条分析内容不是写在 HTML 中，而是由 JS 自动生成。</p>
+                <ul id="todo-1" class="task-list"></ul>
+            </section>
+
+            <!-- 练习2：修改标题为故事设定 + 新增猫咪装饰 -->
+            <section class="task-section task-section-2">
+                <h1>
+                    <i class="fas fa-paw cat-icon"></i> 故事设定
+                </h1>
+                <p class="subtitle">
+                    这三条设定内容都是通过 JavaScript 动态创建的，不是写在 HTML 里的。
+                </p>
+                <ul id="todo-2" class="task-list"></ul>
+            </section>
+
+            <!-- 许愿树：修改标题为许愿树🌳 + 新增猫咪装饰 -->
+            <section id="wish-tree" class="wish-tree-section">
+                <h1>
+                    <i class="fas fa-leaf cat-icon"></i> 许愿树 🌳
+                </h1>
+                <p class="subtitle">可以添加愿望，也可以一键清空所有愿望。</p>
+                <div class="wish-input">
+                    <span class="cat-decoration">🐱</span>
+                    <input id="wish" type="text" placeholder="写下你的愿望…" />
+                    <button id="addBtn">挂到许愿树上</button>
+                    <button id="clearBtn" class="secondary">清空所有愿望</button>
+                </div>
+                <ul id="tree" class="wish-list"></ul>
+                <!-- 新增猫咪装饰元素 -->
+                <div class="cat-corner-decoration"></div>
+            </section>
+
+            <!-- 最新文章 -->
+            <section class="latest-posts">
+                <h2 class="section-heading">
+                    <i class="fas fa-book-open cat-icon"></i> 最新文章
+                </h2>
+                <div class="posts-grid">
+                    <article class="post-card">
+                        <img src="https://ts3.tc.mm.bing.net/th/id/OIP-C.ac2_QAuec4hD3cKFMgffkgHaEw?rs=1&pid=ImgDetMain&o=7&rm=3" alt="罗小黑细节彩蛋" class="post-image" loading="lazy">
+                        <div class="post-content">
+                            <h3 class="post-title"><a href="#">罗小黑战记：那些你没注意到的细节彩蛋</a></h3>
+                            <p class="post-excerpt">作为一部制作精良的国漫，《罗小黑战记》中隐藏了大量细节彩蛋，从角色的服装道具到背景中的小物件，都蕴含着制作组的用心...</p>
+                            <div class="post-meta">
+                                <span class="post-date"><i class="far fa-calendar"></i> 2025-11-20</span>
+                                <span class="post-category"><i class="far fa-folder"></i> 细节分析</span>
+                                <span class="post-comments"><i class="far fa-comment"></i> 28</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="post-card">
+                        <img src="https://ts1.tc.mm.bing.net/th/id/OIP-C.MPYoCqk6fvXG1t0v8eG-DwHaQB?rs=1&pid=ImgDetMain&o=7&rm=3" alt="无限老师人物塑造" class="post-image" loading="lazy">
+                        <div class="post-content">
+                            <h3 class="post-title"><a href="#">无限老师的人物塑造：外冷内热的最强执行者</a></h3>
+                            <p class="post-excerpt">无限作为罗小黑的导师，其人物形象十分立体。他表面冷漠寡言，实则内心温柔，对小黑的教导既有严格的一面，也有默默的守护...</p>
+                            <div class="post-meta">
+                                <span class="post-date"><i class="far fa-calendar"></i> 2025-11-18</span>
+                                <span class="post-category"><i class="far fa-folder"></i> 角色解析</span>
+                                <span class="post-comments"><i class="far fa-comment"></i> 45</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="post-card">
+                        <img src="https://c-ssl.duitang.com/uploads/blog/202012/08/20201208220319_d187b.jpg" alt="妖灵会馆设定解析" class="post-image" loading="lazy">
+                        <div class="post-content">
+                            <h3 class="post-title"><a href="#">妖灵会馆的设定解析：平衡人妖两界的神秘组织</a></h3>
+                            <p class="post-excerpt">妖灵会馆作为动画中的核心组织，承担着平衡人妖两界关系的重要职责。其组织架构、运作模式以及背后的理念，都值得深入探讨...</p>
+                            <div class="post-meta">
+                                <span class="post-date"><i class="far fa-calendar"></i> 2025-11-15</span>
+                                <span class="post-category"><i class="far fa-folder"></i> 世界观</span>
+                                <span class="post-comments"><i class="far fa-comment"></i> 36</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 分类导航 -->
+            <section class="categories">
+                <h2 class="section-heading">
+                    <i class="fas fa-list cat-icon"></i> 文章分类
+                </h2>
+                <div class="categories-container">
+                    <a href="#" class="category-item">
+                        <i class="fas fa-user-friends"></i>
+                        <span class="category-name">角色解析</span>
+                        <span class="category-count">12</span>
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-book"></i>
+                        <span class="category-name">剧情探讨</span>
+                        <span class="category-count">8</span>
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-globe-asia"></i>
+                        <span class="category-name">世界观解析</span>
+                        <span class="category-count">6</span>
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-palette"></i>
+                        <span class="category-name">美术设计</span>
+                        <span class="category-count">4</span>
+                    </a>
+                    <a href="#" class="category-item">
+                        <i class="fas fa-newspaper"></i>
+                        <span class="category-name">最新资讯</span>
+                        <span class="category-count">10</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- 页脚区域 -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3 class="footer-title">关于博客</h3>
+                <p>本博客专注于《罗小黑战记》相关内容分享，包括角色解析、剧情探讨、世界观分析等，欢迎各位小黑粉交流讨论！</p>
+            </div>
+            <div class="footer-links">
+                <h3 class="footer-title">快速链接</h3>
+                <ul class="footer-link-list">
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#characters">角色解析</a></li>
+                    <li><a href="#plot">剧情探讨</a></li>
+                    <li><a href="#art">美术设计</a></li>
+                    <li><a href="#about">关于博主</a></li>
+                    <li><a href="#wish-tree">许愿树</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3 class="footer-title">联系我</h3>
+                <ul class="contact-list">
+                    <li><i class="fab fa-weibo"></i> 微博：@小黑的守护者</li>
+                    <li><i class="fab fa-wechat"></i> 微信：luoxiaohei_blog</li>
+                    <li><i class="far fa-envelope"></i> 邮箱：contact@luoxiaohei.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 罗小黑战记个人博客 - 版权所有 <i class="fas fa-paw cat-icon"></i></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
